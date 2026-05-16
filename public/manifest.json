@@ -1,0 +1,26 @@
+{
+  "name": "Digital Chisel Gallery",
+  "short_name": "Digital Chisel",
+  "description": "Premium Indonesian wood-relief prints and contemplative art sanctuary",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F5DC",
+  "theme_color": "#1A1A1A",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/images/logos/digital-chisel-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "entertainment", "art"],
+  "screenshots": [
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png"
+    }
+  ]
+}

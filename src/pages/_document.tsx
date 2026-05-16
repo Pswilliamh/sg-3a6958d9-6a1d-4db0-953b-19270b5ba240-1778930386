@@ -17,6 +17,14 @@ export default function Document() {
           async
           data-softgen-monitoring="true"
         />
+        
+        {/* PWA Configuration */}
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#1A1A1A" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Digital Chisel" />
+        <link rel="apple-touch-icon" href="/images/logos/digital-chisel-logo.png" />
       </Head>
       <body
         className={cn(
