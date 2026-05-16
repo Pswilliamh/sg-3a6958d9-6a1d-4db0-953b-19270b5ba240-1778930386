@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { DailyAnchor } from "@/components/DailyAnchor";
-import { DigitalChiselGallery } from "@/components/SoundscapeGallery";
+import { DigitalChiselGallery } from "@/components/DigitalChiselGallery";
 import { JAYEmbassy } from "@/components/JAYEmbassy";
 import type { WisdomQuote } from "@/lib/gallery";
 
