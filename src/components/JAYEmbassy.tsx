@@ -197,6 +197,15 @@ export function JAYEmbassy() {
           </Button>
         </div>
 
+        <div className="bg-muted/20 rounded-lg p-6 mb-16 border border-muted/30">
+          <p className="text-center text-foreground font-serif text-lg">
+            🎁 <strong>Free Gift:</strong> Receive exclusive live wallpaper videos with any donation amount
+          </p>
+          <p className="text-center text-muted-foreground text-sm mt-2">
+            Premium animated backgrounds featuring our Digital Chisel artwork
+          </p>
+        </div>
+
         <div className="text-center">
           <Link
             href="https://kingdom-embassy.org"
