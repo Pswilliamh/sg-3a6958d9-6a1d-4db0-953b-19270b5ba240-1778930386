@@ -55,7 +55,7 @@ export default function Home() {
               value="gallery"
               className="font-serif text-base data-[state=active]:bg-background data-[state=active]:text-foreground"
             >
-              The Soundscape Gallery
+              Digital Chisel Gallery
             </TabsTrigger>
             <TabsTrigger
               value="embassy"
