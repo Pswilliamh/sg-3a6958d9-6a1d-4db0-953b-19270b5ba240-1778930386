@@ -1,35 +1,38 @@
 ---
 title: Core Infrastructure & Systems
-status: todo
+status: in_progress
 priority: urgent
 type: feature
-tags: [core, audio, data]
+tags: [infrastructure, audio, animations, data]
 created_by: agent
-created_at: 2026-05-16T08:02:52Z
+created_at: 2026-05-16T08:04:20Z
 position: 4
 ---
 
 ## Notes
-Foundation systems for the sanctuary app: wisdom quotes data structure, audio player with gapless looping, Ken Burns animation utilities, social export canvas renderer, tab navigation system.
+Core systems that support all three tabs: wisdom quotes data, gapless audio player, Ken Burns animation system, and social export functionality. These systems must work seamlessly across the entire sanctuary experience.
 
-Audio: 1-minute piano track hosted in /public/audio/. Web Audio API for gapless looping. Volume fader using gain nodes.
-
-Data: Wisdom quotes stored in /public/data/wisdom-quotes.json. Each quote has: text, author, category fields.
+**Technical requirements:**
+- Audio must loop without gaps using Web Audio API
+- Ken Burns effect: 60s cycle for main view, 30s for thumbnails
+- Daily quote rotation based on day of year
+- Image download functionality for wallpaper application
 
 ## Checklist
-- [ ] Create /public/data/wisdom-quotes.json with 20+ curated wisdom quotes (philosophers, structural thinkers, inspirational figures)
-- [ ] Create /public/audio/ directory with placeholder piano track (user will replace)
-- [ ] Create /public/images/gallery/ directory with 6 placeholder wood-relief images
-- [ ] Create /public/images/logos/ for Digital Chisel and J.A.Y. Trade School logos (generate or placeholder)
-- [ ] Create AudioContext hook (useAudioPlayer.tsx) for gapless looping with volume control
-- [ ] Create utility function for Ken Burns keyframe generation
-- [ ] Create social export utility (canvas-based) for image + quote rendering
-- [ ] Set up main tab navigation in index.tsx (3 tabs: Daily Anchor, Soundscape Gallery, J.A.Y. Embassy)
-- [ ] Implement daily quote rotation logic (deterministic based on current date)
+- [x] Create wisdom-quotes.json with 24+ curated quotes
+- [x] Build useAudioPlayer hook with gapless loop support
+- [x] Implement Ken Burns CSS animations (60s and 30s variants)
+- [x] Create gallery utility functions (daily quote, random image, download)
+- [x] Generate Indonesian wood-relief prints for gallery (6 images)
+- [x] Generate Digital Chisel and J.A.Y. Trade School logos
+- [ ] Add 1-minute instrumental piano track to /public/audio/
+- [ ] Implement volume fade in/out for audio breathing effect
+- [ ] Create social export function (art + quote → branded vertical image)
+- [ ] Set up tab navigation with persistent audio playback
 
 ## Acceptance
-- Wisdom quotes JSON exists with diverse, thoughtful content
-- Audio system plays seamlessly without gaps between loops
-- Tab navigation switches between all three main views
-- Placeholder images and logos in place for immediate preview
+- Wisdom quotes load correctly from JSON file
+- Audio loops seamlessly without gaps (requires audio file upload)
+- Ken Burns animations run at correct speeds on all images
+- Gallery images are in place for immediate preview
 - Social export generates branded vertical images with quote overlay

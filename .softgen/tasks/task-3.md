@@ -1,34 +1,36 @@
 ---
 title: The J.A.Y. Embassy (Mission Page)
-status: todo
+status: in_progress
 priority: high
 type: feature
-tags: [tab3, mission]
+tags: [tab3, mission, editorial]
 created_by: agent
-created_at: 2026-05-16T08:02:52Z
+created_at: 2026-05-16T08:04:20Z
 position: 3
 ---
 
 ## Notes
-Editorial-style mission page with hero placement of J.A.Y. Trade School logo at top. Three content sections: "The 7-Year Residency", "The Digital Chisel Technique", "The J.A.Y. Trade School". Large, breathable typography with generous line-height. Gold "Support the Trade School" CTA button. "Share this Wisdom" social export feature. External link to kingdom-embassy.org.
+Editorial-style mission page explaining the 7-Year Residency program, Digital Chisel technique, and J.A.Y. Trade School philosophy. Hero placement of J.A.Y. logo. Gold "Support" CTA button. Social sharing exports current art with quote as branded vertical image.
 
-Design: Centered column (max 720px), serif headings at large scale (3rem+), body at comfortable 1.125rem with 1.8 line-height. Sections separated by 120px vertical space.
+**Design constraints:**
+- Editorial typography (large, breathable, serif headings)
+- Hero J.A.Y. logo placement at top
+- Gold accent button (#D4AF37) for Support CTA
+- Link to kingdom-embassy.org
+- Restrained layout with generous whitespace
 
 ## Checklist
-- [ ] Create JAYEmbassy.tsx component with editorial layout
-- [ ] Add J.A.Y. Trade School logo at hero position (top center, large scale)
+- [x] Create JAYEmbassy.tsx component with editorial layout
+- [ ] Add J.A.Y. Trade School logo hero placement
 - [ ] Write content for "The 7-Year Residency" section
 - [ ] Write content for "The Digital Chisel Technique" section
 - [ ] Write content for "The J.A.Y. Trade School" section
-- [ ] Implement gold "Support the Trade School" button (opens donation link in new tab)
-- [ ] Add "Share this Wisdom" button that exports current art + quote as vertical image for social media
-- [ ] Include branded Digital Chisel Gallery watermark on exported images
-- [ ] Add external link to kingdom-embassy.org (opens in new tab)
-- [ ] Add to index.tsx as Tab 3 content
+- [ ] Implement gold "Support the Trade School" button linking to kingdom-embassy.org
+- [ ] Add "Share this Wisdom" button (exports art + quote as branded image)
+- [ ] Include external link to kingdom-embassy.org
 
 ## Acceptance
-- Mission page displays with large, readable typography and generous spacing
-- J.A.Y. Trade School logo prominently placed at top
-- All three sections present with thoughtful content
-- Support button and kingdom-embassy.org link function correctly
+- All three sections display with proper editorial typography
+- Support button uses gold accent color and links correctly
+- External link function correctly
 - Share button exports current image with quote and Digital Chisel branding
