@@ -4,11 +4,19 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { DailyAnchor } from "@/components/DailyAnchor";
 import { DigitalChiselGallery } from "@/components/DigitalChiselGallery";
 import { JAYEmbassy } from "@/components/JAYEmbassy";
+import { useAudioPlayer } from "@/hooks/useAudioPlayer";
 import type { WisdomQuote } from "@/lib/gallery";
 
 export default function Home() {
   const [quotes, setQuotes] = useState<WisdomQuote[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  // Global piano loop - auto-plays on app load, continues across all tabs
+  const { play } = useAudioPlayer({
+    src: "/audio/Keyboard_Song_Yosh.mp3",
+    loop: true,
+    autoPlay: false, // Set to false initially, trigger on user interaction
+  });
 
   useEffect(() => {
     fetch("/data/wisdom-quotes.json")
@@ -22,6 +30,24 @@ export default function Home() {
         setIsLoading(false);
       });
   }, []);
+
+  // Start audio on first user interaction (required by browsers)
+  useEffect(() => {
+    const startAudio = () => {
+      play();
+      // Remove listener after first interaction
+      document.removeEventListener("click", startAudio);
+      document.removeEventListener("touchstart", startAudio);
+    };
+
+    document.addEventListener("click", startAudio);
+    document.addEventListener("touchstart", startAudio);
+
+    return () => {
+      document.removeEventListener("click", startAudio);
+      document.removeEventListener("touchstart", startAudio);
+    };
+  }, [play]);
 
   if (isLoading) {
     return (
